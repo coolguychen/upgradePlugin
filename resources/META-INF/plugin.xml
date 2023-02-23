@@ -1,0 +1,36 @@
+<idea-plugin>
+    <id>org.example</id>
+    <name>upgradePlugin</name>
+    <version>1.0</version>
+    <vendor></vendor>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/build-number-ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <!-- 配置 File -> Settings -> Tools -->
+        <projectConfigurable groupId="tools" displayName="My Test util.Config" id="test.id"
+                             instance="factory.SettingFactory"/>
+
+        <!-- 窗体 (IDEA 界面右侧) -->
+        <toolWindow id="upgrade-output" secondary="false" anchor="right" icon="AllIcons.Actions.Colors"
+                    factoryClass="factory.ReadFactory"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+
+    </actions>
+
+    <!-- 依赖模块 -->
+    <depends>com.intellij.modules.platform</depends>
+    <!-- 同时需要引入,否则2020版本找不到 com.intellij.psi -->
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.java</depends>
+
+</idea-plugin>

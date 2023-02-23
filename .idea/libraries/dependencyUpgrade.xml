@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="dependencyUpgrade">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/dependencyUpgrade.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
