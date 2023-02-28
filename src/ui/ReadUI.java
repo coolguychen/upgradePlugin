@@ -11,6 +11,6 @@ public class ReadUI {
     }
 
     public JTextPane getTextContent() {
-        return textContent;
+        return textContent; //返回文字面板（用JScrollPane环绕）
     }
 }

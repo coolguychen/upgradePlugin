@@ -1,7 +1,4 @@
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 
 public class Test {
     public static void main(String[] args) {
@@ -15,9 +12,12 @@ public class Test {
             //why 没有输出？ 无效？
             Process process = Runtime.getRuntime().exec(new String[]{ "cmd", "/c", cmd});
             //等待十秒，执行完成
-            Thread.sleep(10000);
+            process.waitFor();
             //获取输出结果(?)
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(process.getInputStream(), "GB2312"));
+            //读入流 读取ouput.txt 并打印
+            InputStreamReader reader = new InputStreamReader(
+                    new FileInputStream(output)); // 建立一个输入流对象reader
+            BufferedReader bufferedReader = new BufferedReader(reader);
             String line;
             StringBuilder b = new StringBuilder();
             while((line = bufferedReader.readLine()) != null) {

@@ -14,7 +14,7 @@
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
         <!-- 配置 File -> Settings -> Tools -->
-        <projectConfigurable groupId="tools" displayName="My Test util.Config" id="test.id"
+        <projectConfigurable groupId="tools" displayName="Upgrade Third-party Libraries" id="test.id"
                              instance="factory.SettingFactory"/>
 
         <!-- 窗体 (IDEA 界面右侧) -->
@@ -24,10 +24,7 @@
 
     <actions>
         <!-- Add your actions here -->
-        <action id="upgrade_id" class="upgradeAction" text="upgrade" description="升级项目第三方库。">
-            <add-to-group group-id="ToolsMenu" anchor="first"/>
-            <keyboard-shortcut keymap="$default" first-keystroke="ctrl U"/>
-        </action>
+
     </actions>
 
     <!-- 依赖模块 -->
